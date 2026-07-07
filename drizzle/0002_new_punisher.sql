@@ -1,0 +1,1 @@
+ALTER TABLE "atribs_user" RENAME COLUMN "text" TO "role";

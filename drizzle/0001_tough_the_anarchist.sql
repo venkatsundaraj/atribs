@@ -1,0 +1,1 @@
+ALTER TABLE "atribs_vehicles" ALTER COLUMN "year" SET DATA TYPE text;

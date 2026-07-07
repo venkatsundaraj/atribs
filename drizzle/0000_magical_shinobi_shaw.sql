@@ -1,0 +1,23 @@
+-- CREATE TYPE "public"."car_name_enum" AS ENUM('Honda', 'BMW', 'Minicooper', 'Audi', 'Benz');--> statement-breakpoint
+-- CREATE TYPE "public"."role_enum" AS ENUM('user', 'admin');--> statement-breakpoint
+-- CREATE TABLE "atribs_user" (
+-- 	"id" text PRIMARY KEY NOT NULL,
+-- 	"email" text NOT NULL,
+-- 	"password" text NOT NULL,
+-- 	"text" "role_enum" DEFAULT 'user',
+-- 	"created_at" timestamp DEFAULT now(),
+-- 	"updated_at" timestamp DEFAULT now(),
+-- 	CONSTRAINT "atribs_user_email_unique" UNIQUE("email")
+-- );
+-- --> statement-breakpoint
+-- CREATE TABLE "atribs_vehicles" (
+-- 	"id" text PRIMARY KEY NOT NULL,
+-- 	"car_name" "car_name_enum" DEFAULT 'Honda' NOT NULL,
+-- 	"model" text NOT NULL,
+-- 	"year" integer NOT NULL,
+-- 	"user_id" text NOT NULL,
+-- 	"created_at" timestamp DEFAULT now(),
+-- 	"updated_at" timestamp DEFAULT now()
+-- );
+-- --> statement-breakpoint
+-- ALTER TABLE "atribs_vehicles" ADD CONSTRAINT "atribs_vehicles_user_id_atribs_user_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."atribs_user"("id") ON DELETE no action ON UPDATE no action;

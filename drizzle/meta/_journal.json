@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1783413376264,
+      "tag": "0000_magical_shinobi_shaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1783413388853,
+      "tag": "0001_tough_the_anarchist",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1783415258288,
+      "tag": "0002_new_punisher",
+      "breakpoints": true
+    }
+  ]
+}
