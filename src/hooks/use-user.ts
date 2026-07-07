@@ -1,3 +1,4 @@
+import { env } from "@/lib/env";
 import { userValidationType } from "@/lib/validation/user";
 import { UserType } from "@/server/db/schema";
 import { useMutation } from "@tanstack/react-query";
@@ -5,7 +6,7 @@ import { useMutation } from "@tanstack/react-query";
 export const useLogin = function () {
   return useMutation({
     mutationFn: async function (data: userValidationType) {
-      const res = await fetch("http://localhost:3000/api/auth/login", {
+      const res = await fetch(`${env.NEXT_PUBLIC_URL}/api/auth/login`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -23,7 +24,7 @@ export const useLogin = function () {
 export const useRegister = function () {
   return useMutation({
     mutationFn: async function (data: userValidationType) {
-      const res = await fetch("http://localhost:3000/api/auth/signup", {
+      const res = await fetch(`${env.NEXT_PUBLIC_URL}/api/auth/signup`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
